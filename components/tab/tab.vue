@@ -2,7 +2,7 @@
 	<view class="tab-box">
 		<scroll-view scroll-x class="scroll-box">
 			<view class="tab-scroll-box">
-				<view class="scroll-item" v-for="item in tablist">
+				<view class="scroll-item" v-for="(item,index) in tabdata" :key='index'>
 					{{item.name}}
 				</view>
 			</view>
@@ -15,54 +15,54 @@
 
 <script>
 	export default {
+		props: {
+			tabdata: {
+				type: Array,
+				default () {
+					return []
+				}
+			}
+		},
 		data() {
 			return {
-				tablist:[
-					{name:'java'},
-					{name:'var'},
-					{name:'.net'},
-					{name:'react'},
-					{name:'jquery'},
-					{name:'css'},
-					{name:'java'},
-					{name:'var'},
-					{name:'.net'},
-					{name:'react'},
-					{name:'jquery'},
-					{name:'css'}
-				]
+
 			};
 		}
 	}
 </script>
 
 <style lang="scss">
-	.tab-box{
+	.tab-box {
 		border-bottom: 1px solid #ededed;
 		background-color: #fff;
 		display: flex;
 		justify-content: space-between;
-		.scroll-box{
+
+		.scroll-box {
 			flex: 1;
 			overflow: hidden;
-			.tab-scroll-box{
+
+			.tab-scroll-box {
 				height: 45px;
 				display: flex;
 				align-items: center;
-				.scroll-item{
+
+				.scroll-item {
 					font-size: 14px;
 					color: #333;
 					padding: 0 10px;
+					white-space: nowrap;
 				}
 			}
 		}
-		.tab-icon{
+
+		.tab-icon {
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			width: 45px;
-			
-			&::before{
+
+			&::before {
 				content: '';
 				width: 1px;
 				height: 26px;
@@ -70,8 +70,7 @@
 				position: relative;
 				right: 8px;
 			}
-			
+
 		}
 	}
-	
 </style>

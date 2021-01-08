@@ -7,7 +7,7 @@
 				"navigationStyle":"custom"
 			}
 		}
-<<<<<<< HEAD
+
 		
 	    ,{
             "path" : "pages/follow/follow",
@@ -19,22 +19,23 @@
             }
             
         }
+		
         ,{
             "path" : "pages/my/my",
-            "style" :                                                                                    
-            {
+            "style" : {
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false,
 				"navigationStyle":"custom"
-=======
+			}
+		},	
 	    
-        ,{
+        {
             "path" : "pages/newpage/newpage",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
->>>>>>> 1df72aab6c81313a0d104807fe4965c1719ed4a4
+
             }
             
         }
